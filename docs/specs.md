@@ -67,7 +67,7 @@ The first iteration will be built from scratch, without using any frameworks, ex
 * Streaming
   
 ### Flow
-* If user not logged in, authenticate & log in
+* If user not logged in, authenticate and log in
 * If no genre/mood selected, select seed
 * Fetch a first playlist of 10 tracks
 * Display track metadata
