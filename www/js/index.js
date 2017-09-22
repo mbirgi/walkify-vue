@@ -16,10 +16,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+// var Vue = require('vue')
+// var VueMaterial = require('vue-material')
+
+
+Vue.use(VueMaterial);
+
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Hello Vue!'
+        message: 'Hello Spotify!'
     }
 })
 

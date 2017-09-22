@@ -28,19 +28,32 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:; script-src 'self' https://unpkg.com/vue 'unsafe-eval'">
+        <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval';
+            style-src https://fonts.googleapis.com https://unpkg.com 'self' 'unsafe-inline';
+            media-src *; img-src 'self' data: content:;
+            script-src 'self' https://unpkg.com 'unsafe-eval';
+            font-src 'self' https://fonts.gstatic.com">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-material@0.7.5/dist/vue-material.css">
         <title>Hello World</title>
     </head>
     <body>
         <div id="app">
-            {{ message }}
+            <md-toolbar>
+                <h1 class="md-title">Walkify</h1>
+            </md-toolbar>
+            <md-list>
+                <md-list-item>
+                    {{ message }}
+                </md-list-item>
+            </md-list>
+
         </div>
         <!--<div class="app">-->
             <!--<h1>Apache Cordova</h1>-->
